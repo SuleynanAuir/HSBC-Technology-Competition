@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#db0011">
+  <meta name="description" content="HSBC Technology Competition, Silver Prize (2nd Place), April 2024. An LSTM and PPO pipeline connecting stock prediction with personalized trading strategies.">
+  <meta property="og:title" content="HSBC Technology Competition | Silver Prize">
+  <meta property="og:description" content="From stock prediction to personalized strategy. LSTM forecasting, PPO decision-making, and a silver-prize competition project.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://suleynanauir.github.io/HSBC-Technology-Competition/assets/competition.png">
+  <meta property="og:url" content="https://suleynanauir.github.io/HSBC-Technology-Competition/">
+  <title>HSBC Technology Competition | Silver Prize</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#overview">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="HSBC competition project, back to top"><img src="assets/hsbc-logo.png" width="108" height="61" alt="HSBC"><span class="brand-divider"></span><span>PROJECT SHOWCASE</span></a>
+      <nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#approach">Approach</a><a href="#results">Results</a><a href="#analysis">Visualizations <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container" aria-labelledby="project-title">
+      <p class="eyebrow"><span class="red-dot"></span> HSBC TECHNOLOGY COMPETITION · APR 2024</p>
+      <h1 id="project-title">From stock prediction<br>to <span>personalized strategy.</span></h1>
+      <p class="hero-description">Learning price trends with LSTM. Turning market signals into<br class="desktop-break"> user-aware trading decisions with reinforcement learning.</p>
+      <div class="project-meta"><span class="award"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 2 5 6 5-6M6 2h4l2 3 2-3h4l-4 7H10Z"/><circle cx="12" cy="15" r="6"/><path d="m12 11 1 2 2 .3-1.5 1.5.4 2.2-1.9-1-1.9 1 .4-2.2L9 13.3l2-.3Z"/></svg> Silver Prize <span class="award-place">(2nd Place)</span></span><span class="meta-divider"></span><span>Technical Director</span></div>
+      <div class="hero-actions"><a class="button dark" href="#results">Explore the results <span aria-hidden="true">↓</span></a><a class="button light" href="#approach">Inside the pipeline <span aria-hidden="true">↗</span></a></div>
+      <figure class="teaser">
+        <div class="photo-wrap"><img src="assets/competition.png" width="1440" height="1080" alt="HSBC-branded lanyard and competition materials beside a laptop" fetchpriority="high"><div class="photo-label"><span>THE COMPETITION</span><strong>Ideas. Models. Decisions.</strong></div><span class="photo-date">04 / 2024</span></div>
+        <figcaption>A competition project connecting financial forecasting, reinforcement learning and personalized investing.</figcaption>
+      </figure>
+    </section>
+
+    <section id="overview" class="section overview-section">
+      <div class="reading-width"><p class="eyebrow centered">THE PROJECT</p><h2 class="centered">A forecast is only the beginning.</h2><p class="lead centered">The real challenge is turning a market signal into a decision that fits the investor.</p>
+        <p>This project connected an LSTM time-series model with a Proximal Policy Optimization (PPO) trading policy. The forecasting stage extracted price trends; the decision stage combined those signals with quantitative indicators, fundamentals and user trading history to recommend a personalized strategy.</p>
+        <p>As <strong>Technical Director</strong>, I led the technical design of this end-to-end loop: feature representation, time-series forecasting, state and action design, risk-adjusted rewards, and policy learning across users with different trading profiles.</p>
+        <div class="project-tags" aria-label="Project technologies"><span>Time-series forecasting</span><span>Reinforcement learning</span><span>Personalization</span><span>Quantitative finance</span></div>
+      </div>
+    </section>
+
+    <section id="approach" class="section container">
+      <div class="section-heading"><p class="eyebrow">01 / THE APPROACH</p><h2>One connected decision loop.</h2><p>From a vectorized market state to a strategy shaped by the user.</p></div>
+      <div class="pipeline" aria-label="Four stages: inputs, LSTM forecast, PPO policy, personalized strategy">
+        <article class="pipeline-stage"><span class="stage-index">01</span><h3>Represent the market</h3><p>Moving averages, RSI and MACD meet fundamental indicators and user trading history.</p><span class="stage-tag">FEATURE VECTORS</span></article>
+        <article class="pipeline-stage"><span class="stage-index">02</span><h3>Learn price trends</h3><p>An LSTM models temporal patterns in stock prices and supplies predictive signals.</p><span class="stage-tag">LSTM FORECASTING</span></article>
+        <article class="pipeline-stage"><span class="stage-index">03</span><h3>Optimize decisions</h3><p>A PPO policy learns trading actions through a risk-adjusted reward function.</p><span class="stage-tag">POLICY LEARNING</span></article>
+        <article class="pipeline-stage"><span class="stage-index">04</span><h3>Adapt to the investor</h3><p>Market signals and user context come together in a personalized strategy recommendation.</p><span class="stage-tag">USER-AWARE STRATEGY</span></article>
+      </div>
+      <div class="feedback-loop"><span aria-hidden="true">↳</span> Trading outcomes and user context feed back into the decision loop <span aria-hidden="true">↵</span></div>
+      <div class="method-columns"><article><span class="small-label">THE FORECASTING PROBLEM</span><h3>Understand what may happen next.</h3><p>The LSTM stage extracts sequential price structure. Forecast quality is assessed with MAE and RMSE against an ARIMA baseline, keeping prediction accuracy distinct from trading performance.</p></article><article><span class="small-label">THE DECISION PROBLEM</span><h3>Choose what to do about it.</h3><p>The PPO stage optimizes a policy over state, action and reward. It incorporates user trading history and a risk-adjusted objective, rather than treating every investor as the same trading profile.</p></article></div>
+      <details class="method-details"><summary>How the reinforcement-learning problem is framed <span aria-hidden="true">+</span></summary><div class="definition-grid"><div><h4>State</h4><p>Quantitative indicators, fundamental features, predictive signals and user trading history.</p></div><div><h4>Action</h4><p>A trading decision that contributes to the user’s recommended strategy.</p></div><div><h4>Reward</h4><p>A risk-adjusted trading objective used to learn the policy across heterogeneous users.</p></div></div><p class="small-note">Conceptual summary of the project design. Exact action discretization, reward coefficients and training hyperparameters are not included in the supplied project materials.</p></details>
+    </section>
+
+    <section id="results" class="section result-section">
+      <div class="container"><div class="section-heading centered"><p class="eyebrow">02 / PROJECT RESULTS</p><h2>Better forecasts. More effective decisions.</h2><p>Two evaluation layers, from prediction error to simulated trading performance.</p></div>
+        <div class="metrics"><article><span class="metric-label">FORECAST ACCURACY</span><div class="metric-value">15–20<span>%</span><span class="metric-arrow" aria-label="reduction">↓</span></div><h3>Lower MAE / RMSE</h3><p>LSTM forecasting compared with ARIMA.</p></article><article><span class="metric-label">SIMULATED PERFORMANCE</span><div class="metric-value">~6–11<span>%</span><span class="metric-arrow" aria-label="increase">↑</span></div><h3>Cumulative return improvement</h3><p>Reported in simulated PPO backtests.</p></article><article><span class="metric-label">COMPETITION RECOGNITION</span><div class="metric-value">2<span>nd</span><span class="medal-dot" aria-hidden="true">✦</span></div><h3>Silver Prize</h3><p>HSBC Technology Competition · April 2024.</p></article></div>
+        <p class="results-note">Results reported in the competition project summary. These ranges are not new experiments on the financial workbook below. Raw prediction outputs, the backtest comparison baseline and evaluation protocol were not supplied.</p>
+      </div>
+    </section>
+
+    <section id="analysis" class="section container">
+      <div class="section-heading"><p class="eyebrow">03 / A CLOSER LOOK AT THE DATA</p><h2>The fundamentals behind the signals.</h2><p>A separate exploratory analysis of the supplied HSBC financial workbook, covering 2014–2018.</p></div>
+      <p class="analysis-intro">Profitability, dividend coverage and retained earnings offer useful context for a financial feature vector. These visualizations make that fundamental layer tangible; they are not LSTM prediction plots or PPO backtest curves.</p>
+      <div class="figure-tabs" role="tablist" aria-label="Financial analysis figures"><button id="tab-profitability" type="button" role="tab" aria-selected="true" aria-controls="panel-profitability" tabindex="0">01 <span>Profitability</span></button><button id="tab-dividends" type="button" role="tab" aria-selected="false" aria-controls="panel-dividends" tabindex="-1">02 <span>Dividend resilience</span></button><button id="tab-framework" type="button" role="tab" aria-selected="false" aria-controls="panel-framework" tabindex="-1">03 <span>Feature framework</span></button></div>
+      <section id="panel-profitability" class="figure-panel" role="tabpanel" aria-labelledby="tab-profitability" tabindex="0"><figure><button type="button" class="zoom-image" data-image="assets/01_profitability.png" data-title="Profitability and expense trends" aria-label="Enlarge profitability visualization"><img src="assets/01_profitability.png" width="3520" height="2200" alt="HSBC revenue and expense bars with profit margin trends from 2014 to 2018; net margin recovers from 5.7% in 2016 to 18.6% in 2017" loading="lazy"><span class="zoom-hint" aria-hidden="true">⤢ View full size</span></button><figcaption><div><span class="small-label">FIGURE 01</span><h3>A profitability trough, followed by recovery.</h3><p>Net margin increased from <strong>5.7% in 2016 to 18.6% in 2017</strong>. Expense intensity fell over the same period. The 52.9% revenue decline shown for 2018 requires a reporting-scope check before interpretation.</p></div><a href="assets/01_profitability.png" download>Download PNG <span aria-hidden="true">↓</span></a></figcaption></figure></section>
+      <section id="panel-dividends" class="figure-panel" role="tabpanel" aria-labelledby="tab-dividends" tabindex="0" hidden><figure><button type="button" class="zoom-image" data-image="assets/02_dividend_resilience.png" data-title="Dividend coverage and retained profit" aria-label="Enlarge dividend resilience visualization"><img src="assets/02_dividend_resilience.png" width="3520" height="2200" alt="Dividend coverage falls to 0.14 times in 2016; retained profit is negative in 2016 and 2018" loading="lazy"><span class="zoom-hint" aria-hidden="true">⤢ View full size</span></button><figcaption><div><span class="small-label">FIGURE 02</span><h3>Profit recovery does not erase distribution pressure.</h3><p>FY profit covered ordinary dividends just <strong>0.14× in 2016</strong>. Coverage recovered to 1.08× in 2017, while retained profit was only 678 in source units. These are earnings-based measures, not cash-flow coverage.</p></div><a href="assets/02_dividend_resilience.png" download>Download PNG <span aria-hidden="true">↓</span></a></figcaption></figure></section>
+      <section id="panel-framework" class="figure-panel" role="tabpanel" aria-labelledby="tab-framework" tabindex="0" hidden><figure><button type="button" class="zoom-image" data-image="assets/03_model_feature_framework.png" data-title="Fundamental features and the LSTM–PPO workflow" aria-label="Enlarge feature framework visualization"><img src="assets/03_model_feature_framework.png" width="3520" height="2200" alt="Heatmap of five fundamental ratios, with a conceptual LSTM–PPO pipeline and the additional data required" loading="lazy"><span class="zoom-hint" aria-hidden="true">⤢ View full size</span></button><figcaption><div><span class="small-label">FIGURE 03</span><h3>Turn financial statements into candidate state features.</h3><p>Margins, tax rates, dividend coverage and retention ratios describe the fundamental layer. The diagram maps what this workbook provides and what must come from price series and user data; it does not reconstruct the competition’s training runs.</p></div><a href="assets/03_model_feature_framework.png" download>Download PNG <span aria-hidden="true">↓</span></a></figcaption></figure></section>
+      <details class="data-notes"><summary>Data provenance and interpretation</summary><p>Source: <strong>HSBC Dataset.xlsx</strong>, sheet “Dataset and figures”, five annual columns (2014–2018). Ratios were recalculated from the supplied amounts. Currency and amount scale are unspecified; 2018 period comparability is unverified. Supplied operating-margin and dividend-cover fields require reconciliation.</p><p>This workbook contains neither daily OHLCV prices nor user trading histories. It supports descriptive fundamental analysis, but does not independently validate the reported LSTM/PPO results. Heatmap scaling is descriptive across five years; a trained model would require time-aware alignment and training-only normalization.</p></details>
+      <noscript><p>JavaScript is disabled. Open the remaining figures directly: <a href="assets/02_dividend_resilience.png">Dividend resilience</a> · <a href="assets/03_model_feature_framework.png">Feature framework</a>.</p></noscript>
+    </section>
+
+    <section class="closing section"><div class="reading-width"><p class="eyebrow centered">TECHNICAL DIRECTOR · APRIL 2024</p><h2 class="centered">Connecting prediction with purpose.</h2><p class="centered">An end-to-end project bringing together temporal modeling, risk-aware policy learning and the individual behind each trading decision.</p><a class="back-top" href="#top">Back to the project <span aria-hidden="true">↑</span></a></div></section>
+  </main>
+  <footer><div class="container footer-inner"><p><strong>HSBC Technology Competition</strong><br>Silver Prize (2nd Place) · April 2024</p><p>Independent competition project showcase · <a href="https://github.com/SuleynanAuir/HSBC-Technology-Competition" target="_blank" rel="noopener noreferrer">GitHub ↗</a><br>Layout inspired by the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template <span aria-hidden="true">↗</span></a>.</p></div></footer>
+  <dialog id="image-dialog" aria-labelledby="dialog-title"><div class="dialog-toolbar"><h2 id="dialog-title">Visualization</h2><button type="button" class="dialog-close" aria-label="Close full-size visualization">Close <span aria-hidden="true">×</span></button></div><div class="dialog-image-wrap"><img id="dialog-image" alt="Selected full-size financial analysis visualization"></div><a id="dialog-download" download>Download original PNG ↓</a></dialog>
+</body>
+</html>
