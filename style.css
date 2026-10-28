@@ -5,3 +5,25 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 
 @media(max-width:380px){.metrics article,.metrics article:first-child{display:block}.metric-value{font-size:48px}.metrics h3{margin-top:6px}.figure-tabs button span{font-size:9px}h1{font-size:32px}}
+
+/* Editorial methodology: continuous reading rather than boxed summaries. */
+.article-width{width:min(780px,calc(100% - 48px));margin-inline:auto}
+.editorial-section{padding-top:85px;padding-bottom:75px}
+.article-width h2{font-size:37px;line-height:1.25;margin-bottom:25px}
+.article-width p{color:#555e68;font-size:16px;line-height:1.95;margin-top:20px}
+.article-width .eyebrow{font-size:11px;color:var(--red);line-height:1.6;margin-top:0}
+.article-width .article-intro{font-size:19px;line-height:1.85;color:#414953;margin-top:0}
+.article-width .method-scope{font-size:12px;line-height:1.8;color:#8a9099;margin-top:22px;padding-bottom:12px}
+.article-width h3{font-size:25px;line-height:1.35;letter-spacing:-.6px;margin-top:55px;margin-bottom:21px}
+.article-width h3+p{margin-top:0}
+.equation{margin:30px 0;padding:23px 0;border-top:1px solid #e9ebef;border-bottom:1px solid #e9ebef;text-align:center;overflow-x:auto}
+.equation>span{display:block;font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.9;white-space:nowrap;color:#293c52}
+.equation small{display:block;margin-top:9px;font-size:11px;color:#8b929b;line-height:1.7}
+.text-link{border-bottom:1px solid #bdc3ca;color:#333f4e}.text-link:hover{color:var(--red);border-color:var(--red)}
+.article-width .results-note{font-size:12px;line-height:1.85;color:#858b94;margin-top:28px}
+.editorial-results .article-intro strong{font-weight:650;color:#252e3b}
+.overview-section{background:#fff;border:0;margin-top:5px;padding-bottom:65px}
+.overview-section .reading-width{max-width:828px}
+.editorial-section{border-top:1px solid var(--line)}
+.data-notes{border:0;border-top:1px solid var(--line);border-radius:0;background:none;padding-inline:0}
+@media(max-width:600px){.article-width{width:calc(100% - 48px)}.article-width h2{font-size:29px;letter-spacing:-.8px}.article-width .article-intro{font-size:17px;line-height:1.85}.article-width p{font-size:15px;line-height:1.9}.article-width h3{font-size:23px;margin-top:39px}.article-width .eyebrow{font-size:9px}.equation{text-align:left;padding:18px 0}.equation>span{font-size:17px}.equation small{font-size:10px}.editorial-section{padding-block:55px}.overview-section{padding-bottom:50px}.article-width .method-scope{font-size:11px}}
